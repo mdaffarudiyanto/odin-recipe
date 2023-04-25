@@ -1,0 +1,177 @@
+/* to control the style of the body elements */
+body {
+    background: #F0E3CA;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#main-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2em;
+    color: #FF8303;
+    pointer-events: none;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #FF8303;
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin: 0 10px;
+    font-weight: 600;
+    transition: all 0.5s ease 0s;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    background: #FF8303;
+    color: #fff;
+
+}
+
+/* to control the style of the container section in the html */
+.daffa_container {
+    /* Set the display mode of the element to a grid container */
+    display: grid;
+    /* Vertically align the grid items to the center of the container */
+    align-items: center;
+    /* Define the columns of the grid */
+    grid-template-columns: 1fr auto;
+    /* Set the gap between the columns of the grid to 150 pixels */
+    column-gap: 150px;
+    /* Set the top margin of the element to 150 pixels */
+    margin-top: 150px;
+    /* Set the left margin of the element to 100 pixels */
+    margin-left: 100px;
+    /* Set the color of the text inside the element to black */
+    color: #000;
+}
+
+.daffa_container h1 {
+    /* Set the font size of the "h1" element to 70 points */
+    font-size: 70pt;
+}
+
+/* Define the styles for the "h2" element inside the "daffa_container" and "daffa_recipe" classes */
+
+.daffa_container h2,
+.daffa_recipe h2 {
+    /* Set the font size of the "h2" element to 25 points */
+    font-size: 25pt;
+}
+
+/* Define the styles for the "h2" element inside the "daffa_recipe" class */
+
+.daffa_recipe h2 {
+    /* Set the top margin of the "h2" element to 50 pixels */
+    margin-top: 50px;
+    /* Set the left margin of the "h2" element to 100 pixels */
+    margin-left: 100px;
+}
+
+/* Define the styles for the "img" element inside the "daffa_container" class */
+
+.daffa_container img {
+    /* Set the height of the "img" element to 120% of its parent element */
+    height: 120%;
+    /* Vertically align the "img" element to the center of its parent element */
+    align-items: center;
+}
+
+/* Define the styles for the "daffa_slide" class */
+
+.daffa_slide {
+    /* Set the background color of the element to antiquewhite */
+    background-color: antiquewhite;
+    /* Set the top margin of the element to "auto" (automatically calculated by the browser) */
+    margin-top: auto;
+    /* Set the left margin of the element to 100 pixels */
+    margin-left: 100px;
+    /* Set the color of the text inside the element to black */
+    color: #000;
+    /* Set the padding of the element */
+    padding: 20px 80px 80px 20px;
+    /* Set the border radius of the element to 20 pixels */
+    border-radius: 20px;
+    /* Add a box shadow to the element */
+    box-shadow: 0px 0px 10px #ccc;
+    /* Set the right margin of the element to 100 pixels */
+    margin-right: 100px;
+    /* Set the display mode of the element to inline-block */
+    display: inline-block;
+    /* Set the text alignment of the element to center */
+    text-align: center;
+    /* Set the bottom margin of the element to 20 pixels */
+    margin-bottom: 20px;
+}
+
+/* Define the styles for the "h3" element inside the "daffa_slide" class */
+.daffa_slide h3 {
+    /* Set the font size of the "h3" element to 20 points */
+    font-size: 20pt;
+}
+
+/* Define the styles for the "img" element inside the "daffa_slide" class */
+.daffa_slide img {
+    /* Set the height of the "img" element to 600 pixels */
+    height: 600px;
+}
+
+/* Define the styles for the "arrow" class */
+.daffa_arrow {
+    /* Set the cursor to a pointer */
+    cursor: pointer;
+    /* Set the position to absolute */
+    position: absolute;
+    /* Set the top position to 50% of its parent element */
+    top: 50%;
+    /* Set the margin-top to 700 pixels */
+    margin-top: 700px;
+    /* Set the width and height of the element to 0 */
+    width: 0;
+    height: 0;
+    /* Set the border style to solid */
+    border-style: solid;
+}
+
+/* Define the styles for the "daffa-arrow-left" ID */
+#daffa-arrow-left {
+    /* Set the arrow's border width */
+    border-width: 20px 30px 20px 0;
+    /* set the arrow's border color */
+    border-color: transparent #fff transparent transparent;
+    /* set the arrow's position in the left side */
+    left: 0;
+    /* set the arrow's left margin position*/
+    margin-left: 130px;
+}
+
+/* Define the styles for the "daffa-arrow-right" ID */
+#daffa-arrow-right {
+    /* Set the arrow's border width */
+    border-width: 20px 0 20px 30px;
+    /* set the arrow's border color */
+    border-color: transparent transparent transparent #fff;
+    /* set the arrow's position in the right side */
+    right: 0;
+    /* set the arrow's right margin position*/
+    margin-right: 130px;
+}

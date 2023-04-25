@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indonesia Yakisoba</title>
+    <link rel="stylesheet" href="daffa_stylesheet.css">
+</head>
+
+<body>
+    <!-- Declaring the header section -->
+    <header id="main-header">
+        <!-- To write the group name as logo with H2 tag -->
+        <h2 class="logo">WDK</h2>
+        <!-- declaring the webpage navigation -->
+        <nav class="navigation">
+            <!-- the button that leads users to the home page -->
+            <a href="index.html" class="active">Home</a>
+            <!-- the button that leads the users to the about us part -->
+            <a href="index.html#about">About Us</a>
+            <!-- the button that leads the users to the menu part -->
+            <a href="index.html#menus1">Menus</a>
+            <!-- the button that leads the users to the contact part -->
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+    <!-- declaring the first content part of the webpage -->
+    <div class="daffa_container">
+        <!-- seperating the container class into two, below is the first one that will be used for the text -->
+        <div class="daffa_container_text">
+            <!-- declaring the name of the food by using h1 -->
+            <h1>Indonesian Yakisoba</h1>
+            <!-- explaining the food by using h2 and p tag -->
+            <h2>What is Indonesian Yakisoba?</h2>
+            <p>Yakisoba is a popular Japanese stir-fried noodle dish that typically includes vegetables and meat, and is
+                seasoned with a sweet and savory sauce.
+                However, in Indonesia, yakisoba has been adapted to suit local tastes and preferences, resulting in a
+                unique version of the dish that is widely enjoyed in the country.
+
+                In the Indonesian version of yakisoba, the dish is often made with spicy seasonings and a variety of
+                local ingredients such as chili, soy sauce, and kecap manis (a sweet soy sauce). The noodles used in
+                Indonesian yakisoba are typically thin and have a slightly chewy texture, giving the dish a unique
+                mouthfeel that is different from its Japanese counterpart.</p>
+            <!-- explaining the food ingredients by using h2 and p tag -->
+            <h2>Ingredients</h2>
+            <ul>
+                <li>1 pack of Indomie (or any other Indonesian instant noodle)</li>
+            </ul>
+        </div>
+        <!-- the second part of the container which is used for the food image -->
+        <img src="img/indomie.png" alt="">
+    </div>
+
+    <!-- declaring the second content part of the website -->
+    <div class="daffa_recipe">
+        <!-- declaring the how to make subheading by using h2 -->
+        <h2>How to make</h2>
+        <!-- declaring the left arrow button for controlling the slides-->
+        <div id="daffa-arrow-left" class="daffa_arrow"></div>
+        <!-- explaining the first step of how to make the food by h3 and p tags -->
+        <div class="daffa_slide">
+            <h3>1. Boil the water</h3>
+            <p>Boil 2-3 cups of water in a pot.
+            </p>
+            <img src="img/indomie_step1.png" alt="">
+        </div>
+        <!-- explaining the second step of how to make the food by h3 and p tags -->
+        <div class="daffa_slide">
+            <h3>2. Add the Indomie</h3>
+            <p>Add the Indomie noodles to the boiling water and let it cook for 3 minutes, stirring occasionally.
+            </p>
+            <img src="img/indomie_step2.png" alt="">
+        </div>
+        <!-- explaining the third step of how to make the food by h3 and p tags -->
+        <div class="daffa_slide">
+            <h3>3. Pour out the water</h3>
+            <p>After 3 minutes, remove the pot from the heat and pour out the excess water.
+            </p>
+            <img src="img/indomie_step3.png" alt="">
+        </div>
+        <!-- explaining the fourth step of how to make the food by h3 and p tags -->
+        <div class="daffa_slide">
+            <h3>4. Add the Indomie seasoning packets.</h3>
+            <p>Add the Indomie seasoning packets (flavoring powder and chili powder) and stir well
+            </p>
+            <img src="img/indomie_step4.png" alt="">
+        </div>
+        <!-- explaining the final step of how to make the food by h3 and p tags -->
+        <div class="daffa_slide">
+            <h3>5. Enjoy! </h3>
+            <p>Enjoy your delicious Indonesian Yakisoba!
+            </p>
+            <img src="img/indomie_step5.png" alt="">
+        </div>
+        <!-- declaring the right arrow button for controlling the slides-->
+        <div id="daffa-arrow-right" class="daffa_arrow"></div>
+
+</body>
+
+<!-- The script that is used to control the slides in the webpage -->
+<script>
+    // declaring the variable used for the script
+    let sliderImages = document.querySelectorAll(".daffa_slide"),
+        arrowLeft = document.querySelector("#daffa-arrow-left"),
+        arrowRight = document.querySelector("#daffa-arrow-right"),
+        current = 0;
+
+    // Clear all images
+    function reset() {
+        for (let i = 0; i < sliderImages.length; i++) {
+            sliderImages[i].style.display = "none";
+        }
+    }
+
+    // Initial slide
+    function startSlide() {
+        reset();
+        sliderImages[0].style.display = "block";
+    }
+
+    // Show previous
+    function slideLeft() {
+        reset();
+        sliderImages[current - 1].style.display = "block";
+        current--;
+    }
+
+    // Show next
+    function slideRight() {
+        reset();
+        sliderImages[current + 1].style.display = "block";
+        current++;
+    }
+
+    // Left arrow click
+    arrowLeft.addEventListener("click", function () {
+        if (current === 0) {
+            current = sliderImages.length;
+        }
+        slideLeft();
+    });
+
+    // Right arrow click
+    arrowRight.addEventListener("click", function () {
+        if (current === sliderImages.length - 1) {
+            current = -1;
+        }
+        slideRight();
+    });
+    startSlide();
+</script>
+
+</html>
